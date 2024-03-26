@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const base_url = "http://auth-jybium.netlify.app/api";
+const base_url =
+  "https://auth-jybium.netlify.app/api" ||
+  "http://localhost:5137" ;
 
 
 export const api = axios.create({
