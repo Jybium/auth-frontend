@@ -2,7 +2,7 @@ import axios from "axios";
 
 const base_url =
   "https://auth-jybium.netlify.app/api" ||
-  "http://localhost:5137" ;
+  "http://localhost:3000/api" ;
 
 
 export const api = axios.create({
