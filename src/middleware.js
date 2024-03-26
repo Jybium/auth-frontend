@@ -5,7 +5,7 @@ export async function middleware(request, response) {
 
    const headersList = headers();
    const bearerToken = headersList.get("authorization").substring(7);
-  console.log(bearerToken)
+ 
  const currentUrl = request.url;
   const url = request.nextUrl.clone();
   url.pathname = `/login?redirect=${encodeURI(currentUrl)}`;

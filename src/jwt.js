@@ -52,7 +52,7 @@ export const verifyAccessJWT = async (token) => {
       )
     ).payload;
   } catch (error) {
-    console.log(error);
+   
     throw new Error("Your token has expired.");
   }
 };
@@ -66,66 +66,8 @@ export const verifyRefreshJWT = async (token) => {
       )
     ).payload;
   } catch (error) {
-    console.log(error);
+    
     throw new Error("Your token has expired.");
   }
 };
 
-// export const signAccessJWT = (payload, option = signInoptions) => {
-
-//     const secretKey = process.env.JWT_SECRET_KEY
-//     const token = jwt.sign(payload, secretKey, option)
-//     return token
-
-// }
-
-// export const signRefreshJWT = (payload, option = refreshOptions) => {
-
-//     const secretKey = process.env.REFRESH_SECRET_KEY
-//     const token = jwt.sign(payload, secretKey, option)
-//     return token
-
-// }
-
-// export const verifyAccessJWT = (token) => {
-
-//     try {
-//         const secretKey = process.env.JWT_SECRET_KEY;
-//         const decoded = jwt.verify(token, secretKey)
-//         return decoded
-
-//     } catch (error) {
-//         console.log(error)
-//         throw new Error("Token Expired")
-//         // return error
-//     }
-
-// }
-
-// export const verifyRefreshJWT = (token) => {
-
-//     try {
-//         const secretKey = process.env.REFRESH_SECRET_KEY;
-//         const decoded = jwt.verify(token, secretKey)
-//         return decoded
-
-//     } catch (error) {
-//         console.log(error)
-//         throw new Error("Token Expired")
-//     }
-
-// }
-
-// export const decodeToken = (token) => {
-
-//     try {
-
-//         const decoded = jwt.decode(token, {complete: true})
-//         return decoded, decoded.payload
-
-//     } catch (error) {
-//         console.log(error)
-//         return null
-//     }
-
-// }

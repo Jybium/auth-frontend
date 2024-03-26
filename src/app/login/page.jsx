@@ -38,8 +38,6 @@ const Signinform = () => {
       const refreshToken = response.data.data.user.refreshToken;
       localStorage.setItem("token", token);
       localStorage.setItem("refreshToken", refreshToken);
-      console.log(token, refreshToken)
-      console.log(response.data);
       setAuth((prev) => {
         return {
           ...prev,
@@ -52,7 +50,7 @@ const Signinform = () => {
       successToast("Login Successfully!");
     } catch (error) {
       errorToast(error.response ? error.response.data.message : error.message);
-      console.log(error);
+      
     } finally {
       setIsLoading(false);
     }
